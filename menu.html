@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Pizza Inn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="menu">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-img">PI</div>
+                <div class="logo-text">Pizza <span>Inn</span></div>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="track.html" class="nav-link">Track Order</a></li>
+                <li><a href="complaints.html" class="nav-link">Complaints</a></li>
+                <li>
+                    <a href="order.html" class="cart-icon" title="View Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" style="display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Our <span class="highlight">Menu</span></h1>
+            <p class="hero-subtitle">Explore our delicious range of pizzas, burgers, sides, and drinks</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Categories -->
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="pizza">Pizzas</button>
+                <button class="category-btn" data-category="burger">Burgers</button>
+                <button class="category-btn" data-category="sides">Sides</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu-items">
+                <!-- Pizzas -->
+                <div class="menu-item" data-category="pizza" data-id="p1" data-name="Pepperoni Supreme" data-price="3640">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="Pepperoni Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Pepperoni Supreme</h3>
+                        <p class="menu-card-description">Loaded with premium pepperoni, mozzarella cheese, and our special tomato sauce.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 3,640</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('p1', 'Pepperoni Supreme', 3640, 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-id="p2" data-name="Margherita Classic" data-price="3080">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Margherita Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Margherita Classic</h3>
+                        <p class="menu-card-description">Fresh tomatoes, mozzarella cheese, basil leaves, and extra virgin olive oil.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 3,080</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('p2', 'Margherita Classic', 3080, 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-id="p3" data-name="BBQ Chicken" data-price="4200">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="BBQ Chicken Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">BBQ Chicken</h3>
+                        <p class="menu-card-description">Grilled chicken, red onions, cilantro, and tangy BBQ sauce.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 4,200</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('p3', 'BBQ Chicken', 4200, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-id="p4" data-name="Veggie Delight" data-price="3360">
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&h=300&fit=crop" alt="Veggie Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Veggie Delight</h3>
+                        <p class="menu-card-description">Bell peppers, mushrooms, onions, olives, and fresh tomatoes.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 3,360</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('p4', 'Veggie Delight', 3360, 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-id="p5" data-name="Meat Lovers" data-price="4480">
+                    <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop" alt="Meat Lovers Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Meat Lovers</h3>
+                        <p class="menu-card-description">Pepperoni, sausage, bacon, ham, and ground beef.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 4,480</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('p5', 'Meat Lovers', 4480, 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-id="p6" data-name="Hawaiian" data-price="3640">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Hawaiian Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Hawaiian</h3>
+                        <p class="menu-card-description">Ham, pineapple chunks, and mozzarella cheese.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 3,640</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('p6', 'Hawaiian', 3640, 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burgers -->
+                <div class="menu-item" data-category="burger" data-id="b1" data-name="Classic Beef Burger" data-price="2520">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Beef Burger" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Classic Beef Burger</h3>
+                        <p class="menu-card-description">Juicy beef patty with lettuce, tomato, onion, and special sauce.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 2,520</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('b1', 'Classic Beef Burger', 2520, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burger" data-id="b2" data-name="Crispy Chicken Burger" data-price="2240">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop" alt="Chicken Burger" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Crispy Chicken Burger</h3>
+                        <p class="menu-card-description">Crispy fried chicken patty with fresh lettuce and tomato.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 2,240</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('b2', 'Crispy Chicken Burger', 2240, 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burger" data-id="b3" data-name="Double Cheese Burger" data-price="3080">
+                    <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop" alt="Cheese Burger" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Double Cheese Burger</h3>
+                        <p class="menu-card-description">Two beef patties with double cheese, bacon, and special sauce.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 3,080</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('b3', 'Double Cheese Burger', 3080, 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sides -->
+                <div class="menu-item" data-category="sides" data-id="s1" data-name="Garlic Bread" data-price="1400">
+                    <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400&h=300&fit=crop" alt="Garlic Bread" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Garlic Bread</h3>
+                        <p class="menu-card-description">Crispy bread topped with garlic butter, herbs, and mozzarella.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 1,400</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('s1', 'Garlic Bread', 1400, 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="sides" data-id="s2" data-name="French Fries" data-price="1120">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop" alt="French Fries" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">French Fries</h3>
+                        <p class="menu-card-description">Crispy golden fries with your choice of seasoning.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 1,120</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('s2', 'French Fries', 1120, 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="sides" data-id="s3" data-name="Onion Rings" data-price="1260">
+                    <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=400&h=300&fit=crop" alt="Onion Rings" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Onion Rings</h3>
+                        <p class="menu-card-description">Crispy battered onion rings, perfect accompaniment.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 1,260</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('s3', 'Onion Rings', 1260, 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="sides" data-id="s4" data-name="Chicken Wings" data-price="2240">
+                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop" alt="Chicken Wings" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Chicken Wings</h3>
+                        <p class="menu-card-description">Crispy wings tossed in your choice of sauce: BBQ, Hot, or Garlic.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 2,240</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('s4', 'Chicken Wings', 2240, 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-item" data-category="drinks" data-id="d1" data-name="Soft Drink" data-price="200">
+                    <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=400&h=300&fit=crop" alt="Soft Drink" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Soft Drink</h3>
+                        <p class="menu-card-description">Coca-Cola, Sprite, Fanta, or Pepsi (500ml)</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 200</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('d1', 'Soft Drink', 200, 'https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks" data-id="d2" data-name="Fresh Juice" data-price="350">
+                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop" alt="Fresh Juice" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Fresh Juice</h3>
+                        <p class="menu-card-description">Freshly squeezed orange, apple, or mango juice.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 350</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('d2', 'Fresh Juice', 350, 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks" data-id="d3" data-name="Milkshake" data-price="500">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop" alt="Milkshake" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Milkshake</h3>
+                        <p class="menu-card-description">Creamy milkshake in chocolate, vanilla, or strawberry.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 500</div>
+                            <button class="btn btn-primary add-to-cart" onclick="addItemToCart('d3', 'Milkshake', 500, 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Pizza Inn</h4>
+                    <p style="color: var(--text-gray);">Your destination for the best handcrafted pizzas and fast food.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/PizzaInn786/" target="_blank" class="social-icon">f</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">tw</a>
+                        <a href="#" class="social-icon">ig</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="order.html">Order Online</a>
+                        <a href="reviews.html">Reviews</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="order.html">Dine In</a>
+                        <a href="order.html">Take Out</a>
+                        <a href="order.html">Delivery</a>
+                        <a href="track.html">Track Order</a>
+                        <a href="complaints.html">Complaints</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <p style="color: var(--text-gray);">📍 123 Pizza Street</p>
+                        <p style="color: var(--text-gray);">📞 0333 1032000</p>
+                        <p style="color: var(--text-gray);">✉️ info@pizzainn.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pizza Inn. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Pizza Inn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="order">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-img">PI</div>
+                <div class="logo-text">Pizza <span>Inn</span></div>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="order.html" class="nav-link active">Order</a></li>
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="track.html" class="nav-link">Track Order</a></li>
+                <li><a href="complaints.html" class="nav-link">Complaints</a></li>
+                <li>
+                    <a href="order.html" class="cart-icon" title="View Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" style="display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Order Hero -->
+    <section class="order-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Place Your <span class="highlight">Order</span></h1>
+            <p class="hero-subtitle">Browse our menu, add items to cart, and get your favorite pizza delivered!</p>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="section">
+        <div class="container">
+            <div class="order-content">
+                <!-- Order Items -->
+                <div class="order-items">
+                    <h2 style="margin-bottom: 1.5rem; text-align: center;">Your Cart</h2>
+                    <div id="cartItems">
+                        <!-- Cart items will be rendered here -->
+                        <div style="text-align: center; padding: 3rem; color: var(--text-gray);">
+                            <p style="font-size: 1.25rem;">🛒 Your cart is empty</p>
+                            <p>Add some delicious pizzas to get started!</p>
+                            <a href="menu.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Browse Menu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cartSummary">
+                    <h3>Order Summary</h3>
+                    <p style="text-align: center; color: var(--text-gray);">No items in cart</p>
+                </div>
+            </div>
+
+            <!-- Delivery Details Form -->
+            <div style="margin-top: 2rem; background: var(--light-bg); padding: 2rem; border-radius: 16px; box-shadow: var(--shadow-md);">
+                <h3 style="margin-bottom: 1.5rem; text-align: center;">Delivery Details</h3>
+                <form id="deliveryForm">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryAddress">Delivery Address *</label>
+                        <textarea id="deliveryAddress" class="form-control" placeholder="Enter your complete delivery address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="orderNotes">Order Notes (Optional)</label>
+                        <textarea id="orderNotes" class="form-control" placeholder="Any special instructions..." rows="2"></textarea>
+                    </div>
+                    
+                    <!-- Payment Method -->
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="margin-bottom: 1rem;">Payment Method</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; padding: 1rem; border: 2px solid var(--primary-red); border-radius: 8px; cursor: pointer; background: rgba(227, 24, 55, 0.1);">
+                                <input type="radio" name="payment" value="cash" checked>
+                                💵 Cash on Delivery
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; padding: 1rem; border: 2px solid #ddd; border-radius: 8px; cursor: pointer;">
+                                <input type="radio" name="payment" value="online">
+                                📱 Online Payment
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Online Payment Section (Hidden by default) -->
+                    <div id="onlinePaymentSection" style="display: none; margin-top: 1.5rem; background: var(--light-gray); padding: 1.5rem; border-radius: 12px;">
+                        <h4 style="margin-bottom: 1rem;">Select Payment App</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                            <label style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; text-align: center;">
+                                <input type="radio" name="onlineMethod" value="easypaisa">
+                                <span style="font-size: 1.5rem;">📱</span>
+                                <span>Easypaisa</span>
+                            </label>
+                            <label style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; text-align: center;">
+                                <input type="radio" name="onlineMethod" value="jazzcash">
+                                <span style="font-size: 1.5rem;">💳</span>
+                                <span>JazzCash</span>
+                            </label>
+                            <label style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; text-align: center;">
+                                <input type="radio" name="onlineMethod" value="bank">
+                                <span style="font-size: 1.5rem;">🏦</span>
+                                <span>Bank Transfer</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paymentProof">Payment Proof / Transaction ID *</label>
+                            <input type="text" id="paymentProof" class="form-control" placeholder="Enter your transaction ID or payment reference number">
+                            <small style="color: var(--text-gray);">Please transfer the total amount to our account and enter the transaction ID here.</small>
+                        </div>
+                        
+                        <div style="background: var(--light-bg); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="font-weight: 600; margin-bottom: 0.5rem;">Payment Details:</p>
+                            <p style="color: var(--text-gray); margin: 0;"><strong>Easypaisa/JazzCash:</strong> 0333 1032000</p>
+                            <p style="color: var(--text-gray); margin: 0;"><strong>Bank:</strong> HBL Account # 1234567890</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Pizza Inn</h4>
+                    <p style="color: var(--text-gray);">Your destination for the best handcrafted pizzas and fast food.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/PizzaInn786/" target="_blank" class="social-icon">f</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">tw</a>
+                        <a href="#" class="social-icon">ig</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="order.html">Order Online</a>
+                        <a href="reviews.html">Reviews</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="order.html">Dine In</a>
+                        <a href="order.html">Take Out</a>
+                        <a href="order.html">Delivery</a>
+                        <a href="track.html">Track Order</a>
+                        <a href="complaints.html">Complaints</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <p style="color: var(--text-gray);">📍 123 Pizza Street</p>
+                        <p style="color: var(--text-gray);">📞 0333 1032000</p>
+                        <p style="color: var(--text-gray);">✉️ info@pizzainn.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pizza Inn. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

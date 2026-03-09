@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Inn - Best Pizza in Town</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-img">PI</div>
+                <div class="logo-text">Pizza <span>Inn</span></div>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="track.html" class="nav-link">Track Order</a></li>
+                <li><a href="complaints.html" class="nav-link">Complaints</a></li>
+                <li>
+                    <a href="order.html" class="cart-icon" title="View Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" style="display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="highlight">Pizza Inn</span></h1>
+            <p class="hero-subtitle">Experience the authentic taste of handcrafted pizzas made with fresh ingredients and love. Order now and satisfy your cravings!</p>
+            <div class="btn-group">
+                <a href="menu.html" class="btn btn-primary">View Menu</a>
+                <a href="order.html" class="btn btn-secondary">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Items -->
+    <section class="section featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Popular Items</h2>
+                <p>Discover our most loved pizzas and fast food items that keep our customers coming back for more</p>
+            </div>
+            
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-card animate-on-load">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="Pepperoni Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Pepperoni Supreme</h3>
+                        <p class="menu-card-description">Loaded with premium pepperoni, mozzarella cheese, and our special tomato sauce on a crispy crust.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 3,640</div>
+                            <a href="order.html" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-card animate-on-load">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Margherita Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Margherita Classic</h3>
+                        <p class="menu-card-description">Fresh tomatoes, mozzarella cheese, basil leaves, and extra virgin olive oil on our signature crust.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 3,080</div>
+                            <a href="order.html" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-card animate-on-load">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="BBQ Chicken Pizza" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">BBQ Chicken</h3>
+                        <p class="menu-card-description">Grilled chicken, red onions, cilantro, and tangy BBQ sauce with melted cheese.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 4,200</div>
+                            <a href="order.html" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-card animate-on-load">
+                    <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400&h=300&fit=crop" alt="Garlic Bread" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Garlic Bread</h3>
+                        <p class="menu-card-description">Crispy bread topped with garlic butter, herbs, and melted mozzarella cheese.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 1,400</div>
+                            <a href="order.html" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="menu-card animate-on-load">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop" alt="Chicken Burger" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Crispy Chicken Burger</h3>
+                        <p class="menu-card-description">Crispy fried chicken patty with fresh lettuce, tomato, and special sauce.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 2,240</div>
+                            <a href="order.html" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="menu-card animate-on-load">
+                    <img src="https://images.unsplash.com/photo-1582542921157-99e9441005e4?w=400&h=300&fit=crop" alt="Cold Drinks" class="menu-card-image">
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Refreshing Drinks</h3>
+                        <p class="menu-card-description">Choose from our selection of cold beverages including sodas, fresh juices, and shakes.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-price">Rs. 200</div>
+                            <a href="order.html" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="menu.html" class="btn btn-outline">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Pizza Inn</h2>
+                <p>Learn more about our story and commitment to quality</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image animate-on-load">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop" alt="Pizza Inn Restaurant">
+                </div>
+                <div class="about-text">
+                    <h3 style="text-align: center;">Welcome to Pizza Inn</h3>
+                    <p style="text-align: center;">Welcome to Pizza Inn, where passion meets pizza! Since our inception, we've been dedicated to serving the finest handcrafted pizzas made with the freshest ingredients and time-honored recipes.</p>
+                    <p style="text-align: center;">Our commitment to quality, taste, and customer satisfaction has made us a favorite among pizza lovers. Every pizza is made to order, ensuring you get the perfect meal every time.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature animate-on-load">
+                            <div class="about-feature-icon">🍕</div>
+                            <div>
+                                <h4>Fresh Ingredients</h4>
+                                <p style="color: var(--text-gray); font-size: 0.9rem;">Locally sourced produce</p>
+                            </div>
+                        </div>
+                        <div class="about-feature animate-on-load">
+                            <div class="about-feature-icon">🚚</div>
+                            <div>
+                                <h4>Fast Delivery</h4>
+                                <p style="color: var(--text-gray); font-size: 0.9rem;">Hot & fresh to your door</p>
+                            </div>
+                        </div>
+                        <div class="about-feature animate-on-load">
+                            <div class="about-feature-icon">⭐</div>
+                            <div>
+                                <h4>Quality Service</h4>
+                                <p style="color: var(--text-gray); font-size: 0.9rem;">Customer satisfaction guaranteed</p>
+                            </div>
+                        </div>
+                        <div class="about-feature animate-on-load">
+                            <div class="about-feature-icon">👨‍👩‍👧</div>
+                            <div>
+                                <h4>Family Friendly</h4>
+                                <p style="color: var(--text-gray); font-size: 0.9rem;">Perfect for family gatherings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear what our satisfied customers have to say</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-load">
+                    <img src="https://ui-avatars.com/api/?name=Ahmed+Khan&background=E31837&color=fff" alt="Ahmed Khan" class="testimonial-image">
+                    <p class="testimonial-text">"Best pizza in town! The crust is perfectly crispy and the toppings are always fresh. Highly recommend the Pepperoni Supreme!"</p>
+                    <p class="testimonial-author">- Ahmed Khan</p>
+                    <div class="testimonial-rating">★★★★★</div>
+                </div>
+                
+                <div class="testimonial-card animate-on-load">
+                    <img src="https://ui-avatars.com/api/?name=Sarah+Ali&background=FFC72C&color=1A1A1A" alt="Sarah Ali" class="testimonial-image">
+                    <p class="testimonial-text">"Great service and delicious food. The delivery was super fast and the pizza arrived hot. Will order again!"</p>
+                    <p class="testimonial-author">- Sarah Ali</p>
+                    <div class="testimonial-rating">★★★★★</div>
+                </div>
+                
+                <div class="testimonial-card animate-on-load">
+                    <img src="https://ui-avatars.com/api/?name=Mohammad+Rashid&background=E31837&color=fff" alt="Mohammad Rashid" class="testimonial-image">
+                    <p class="testimonial-text">"Good quality pizza, but the delivery took a bit longer than expected. Taste is excellent though."</p>
+                    <p class="testimonial-author">- Mohammad Rashid</p>
+                    <div class="testimonial-rating">★★★★☆</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="reviews.html" class="btn btn-secondary">Read All Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Visit us or send us a message!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Pizza Street, Food City, FC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>0333 1032000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@pizzainn.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h4>Hours</h4>
+                            <p>Mon-Sun: 11:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Contact Us</a>
+                    <a href="track.html" class="btn btn-outline" style="width: 100%; text-align: center; margin-top: 1rem;">Track Your Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Pizza Inn</h4>
+                    <p style="color: var(--text-gray);">Your destination for the best handcrafted pizzas and fast food. Fresh ingredients, authentic taste!</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/PizzaInn786/" target="_blank" class="social-icon">f</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">tw</a>
+                        <a href="#" class="social-icon">ig</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="order.html">Order Online</a>
+                        <a href="reviews.html">Reviews</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="order.html">Dine In</a>
+                        <a href="order.html">Take Out</a>
+                        <a href="order.html">Delivery</a>
+                        <a href="track.html">Track Order</a>
+                        <a href="complaints.html">Complaints</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p style="color: var(--text-gray); margin-bottom: 1rem;">Subscribe for special offers and updates!</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Your email" style="flex: 1; padding: 0.5rem; border: none; border-radius: 4px;">
+                        <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pizza Inn. All Rights Reserved. | Designed with ❤️ by Pizza Inn Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
