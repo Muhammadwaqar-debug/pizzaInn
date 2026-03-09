@@ -1,0 +1,13 @@
+{
+  "name": "pizza-inn",
+  "version": "1.0.0",
+  "description": "Pizza Inn Mobile App",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": ["pizza", "restaurant", "food"],
+  "author": "Pizza Inn",
+  "license": "MIT"
+}

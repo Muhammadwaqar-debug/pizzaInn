@@ -1,0 +1,9 @@
+{
+  "appId": "com.pizzainn.app",
+  "appName": "Pizza Inn",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
